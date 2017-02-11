@@ -3,6 +3,7 @@ It supports several events such as even on server creation, on connection reciev
 
 
 In this document it is described how we can:<br />
+     -install library<br />
      -create server<br />
      -use events<br />
      -read client message on server<br />
@@ -10,9 +11,19 @@ In this document it is described how we can:<br />
      -send message to server<br />
 
 
+##Installation
+-Download the release Jar file (<a href="https://github.com/mihibo5/Java_TCP/releases/download/1.0/LibTCP.jar">Download</a>)<br />
+-Import Jar file into External Libraries<br />
+-Follow the instructions below<br />
+
+
+##Basics
+
 Server supports methods such as method for disonnecting and restarting server. Client supports methods such as methods for establishing connection and disconnecting.
 
 The whole server and client runs asynchronically. This will allow your code to keep running after the server starts or client establishes connection.
+
+##Server
 
 The whole project is written in Java. The usage of this library is simple. Here are an example of how to create server:
 
@@ -80,7 +91,7 @@ String message = data.get("Message");
 
 If we wanted for example print IP and message of each client when they connect we would use this in method onConnected().
 
-
+##Client
 
 Now let's see an example of how to create a TCP client:
 
