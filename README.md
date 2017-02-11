@@ -20,11 +20,14 @@ The whole project is written in Java. The usage of this library is simple. Here 
 import LibTCP.OnConnect;
 import LibTCP.Server;
 
+import java.io.IOException;
+import java.util.HashMap;
+
 public class MyServer {
     
     private static HashMap<String, String> data = new HashMap<>();
     
-    public static void main (String args[]) {
+    public static void main (String args[]) throws IOException, InterruptedException {
         final Server server = new Server("192.168.1.100", 11000, data, new OnConnect() {
             @Override
             public void onCreate(HashMap<String, String> serverInfo) {
@@ -84,6 +87,9 @@ Now let's see an example of how to create a TCP client:
 ```java
 import LibTCP.Client;
 import LibTCP.OnConnect;
+
+import java.io.IOException;
+import java.util.HashMap;
 
 public class MyClient {
 
